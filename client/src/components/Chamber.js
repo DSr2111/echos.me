@@ -205,7 +205,12 @@ function Chamber() {
       <div className="article-grid">
         {articles?.length > 0 &&
           articles.map((article, index) => (
-            <div key={index} className="article-card">
+            <div
+              key={index}
+              className="article-card"
+              onClick={() => window.open(article.url, '_blank')} // Open article in a new tab
+              style={{ cursor: 'pointer' }} // Add pointer cursor for better UX
+            >
               {article.image && (
                 <img
                   src={article.image}
@@ -215,7 +220,10 @@ function Chamber() {
               )}
               <h3>{article.title}</h3>
               <p>{article.description || 'No description available.'}</p>
-              <div className="icon-section">
+              <div
+                className="icon-section"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <FontAwesomeIcon
                   icon={faHeart}
                   className="heart-icon"
