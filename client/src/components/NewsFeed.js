@@ -52,7 +52,7 @@ function NewsFeed({ refreshKey, settings, onKeywordUpdate, useCachedData }) {
       setBackupArticles(articles);
 
       const response = await fetch(
-        `http://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=${
+        `https://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=${
           filters.category
         }&languages=${
           filters.language

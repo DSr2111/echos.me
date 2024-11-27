@@ -58,7 +58,7 @@ function Chamber() {
       const API_KEY = process.env.REACT_APP_MEDIASTACK_API_KEY;
 
       const response = await fetch(
-        `http://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=${category}&languages=${language}&keywords=${keywords}&limit=${limit}&offset=${
+        `https://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=${category}&languages=${language}&keywords=${keywords}&limit=${limit}&offset=${
           (pageToFetch - 1) * limit
         }`
       );
