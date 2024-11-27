@@ -66,33 +66,40 @@ function FavoritedArticles() {
   return (
     <div className="favorites-container">
       <h2>Your Favorited Articles</h2>
-      <div className="favorites-grid">
-        {favorites.map((fav) => (
-          <div key={fav.favorite_id} className="favorite-card">
-            {/* Render the image only if it exists */}
-            {fav.image_url && (
-              <img
-                src={fav.image_url}
-                alt={fav.title}
-                className="favorite-image"
-              />
-            )}
-            <div className="favorite-content">
-              <a href={fav.url} target="_blank" rel="noopener noreferrer">
-                <h3>{fav.title}</h3>
-              </a>
-              {/* Always show the description */}
-              <p>{fav.description}</p>
-              <button
-                className="remove-favorite-button"
-                onClick={() => handleRemoveFavorite(fav.favorite_id)}
-              >
-                Remove
-              </button>
+      {favorites.length === 0 ? (
+        <div className="no-favorites-message">
+          <p>
+            You haven't favorited any articles yet. Browse through the news and
+            click the <span className="heart-icon">❤️</span> icon to save articles here!
+          </p>
+        </div>
+      ) : (
+        <div className="favorites-grid">
+          {favorites.map((fav) => (
+            <div key={fav.favorite_id} className="favorite-card">
+              {fav.image_url && (
+                <img
+                  src={fav.image_url}
+                  alt={fav.title}
+                  className="favorite-image"
+                />
+              )}
+              <div className="favorite-content">
+                <a href={fav.url} target="_blank" rel="noopener noreferrer">
+                  <h3>{fav.title}</h3>
+                </a>
+                <p>{fav.description}</p>
+                <button
+                  className="remove-favorite-button"
+                  onClick={() => handleRemoveFavorite(fav.favorite_id)}
+                >
+                  Remove
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
