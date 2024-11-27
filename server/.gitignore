@@ -1,0 +1,18 @@
+# Dependency directory
+node_modules/
+
+# Environment variables
+secret.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE or system files
+.DS_Store
+
+# Temporary files
+temp/

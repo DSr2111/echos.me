@@ -1,0 +1,58 @@
+/* Navbar.css */
+
+/* Navbar-specific container fixes */
+.app-navbar .container {
+  max-width: 100%;
+  padding: 0 15px; /* Ensures consistent padding */
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+.navbar-brand:hover {
+  color: #0056b3 !important;
+}
+
+/* Adjust nav link appearance */
+.nav-link {
+  margin: 0 10px;
+  color: #555 !important;
+  font-size: 16px; /* Ensures uniform link size */
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Navbar fixes */
+.navbar {
+  align-items: center;
+  padding: 10px 0; /* Removes excess vertical spacing */
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix collapse and toggle spacing */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 20px; /* Reduce size on smaller screens */
+  }
+
+  .nav-link {
+    font-size: 14px;
+    margin: 0 5px; /* Adjust spacing for smaller screens */
+  }
+}

@@ -1,0 +1,55 @@
+/* client/src/components/SearchBar.css */
+
+.search-bar-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 40px; /* Add padding for the icon space */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 18px;
+  pointer-events: none; /* Prevent icon from blocking input interaction */
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}

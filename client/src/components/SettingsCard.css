@@ -1,0 +1,181 @@
+.settings-card {
+  position: fixed;
+  top: 220px; /* Adjust as needed */
+  left: 20px;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-heading {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.info-icon-container {
+  position: relative;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.info-icon-container .bi-info-circle {
+  font-size: 1.2rem;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-icon-container:hover .bi-info-circle {
+  color: #007bff;
+}
+
+.info-icon-container::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -32px;
+  right: -80px; /* Adjusted to move the tooltip further to the right */
+  background-color: #333;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  max-width: 200px; /* Added a max width to prevent overflow */
+  word-wrap: break-word; /* Ensures the tooltip text wraps to the next line if needed */
+  opacity: 0;
+  visibility: hidden;
+  white-space: normal; /* Allows wrapping of the text */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.info-icon-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter-group {
+  margin-bottom: 12px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.settings-select,
+.settings-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.update-button:hover {
+  background-color: #0056b3;
+}
+
+.create-chamber-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5a2a8f; /* Dark purple */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-chamber-button:hover {
+  background-color: #431f6d; /* Slightly darker purple for hover */
+}
+
+.settings-card {
+  position: fixed;
+  top: 220px;
+  left: 0; /* Default visible state */
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+}
+
+/* Visibility Toggle CSS */
+
+.settings-tab i.bi-gear {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
+}
+
+.settings-card.hidden {
+  transform: translateX(-270px); /* Slides card out of view */
+}
+
+.settings-card.visible {
+  transform: translateX(0); /* Slides card into view */
+}
+
+.settings-tab {
+  position: fixed;
+  top: 280px;
+  left: 0;
+  width: 60px;
+  height: 40px;
+  background-color: #4f4f4f;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.settings-tab:hover {
+  background-color: #313131;
+}
+
+.hide-button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #7a7071; /* Red for hide button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hide-button:hover {
+  background-color: #979393;
+}

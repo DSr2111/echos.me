@@ -1,0 +1,165 @@
+/* Container Styles */
+.favorites-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out; /* Smooth transition for themes */
+  text-align: center; /* Center the container */
+}
+
+/* Title Styles */
+.favorite-title {
+  font-size: 28px;
+  text-decoration: none; /* Ensure no underline */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Favorites Grid Styles */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Center the grid content */
+}
+
+.favorite-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures spacing between content and button */
+  height: 100%; /* Makes the card's height uniform */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.favorite-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Title inside Favorite Card */
+.favorite-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out; /* Smooth color change */
+}
+
+/* Anchor Tag for Title */
+.favorite-card a {
+  text-decoration: none; /* Remove underline from title links */
+  color: inherit; /* Inherit text color from the parent */
+}
+
+.favorite-card a:hover h3 {
+  color: var(--hover-title-color, #555); /* Dark grey on hover */
+}
+
+/* Description inside Favorite Card */
+.favorite-content p {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-height: 4.5em; /* Adjust based on the number of lines you want */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines before truncation */
+  -webkit-box-orient: vertical;
+}
+
+/* Favorite Image */
+.favorite-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Remove Favorite Button */
+.remove-favorite-button {
+  margin-top: auto; /* Pushes the button to the bottom of the card */
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-favorite-button:hover {
+  background-color: #d50000;
+}
+
+/* Placeholder or Loading Styles */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: var(--secondary-text-color);
+}
+
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .favorites-container {
+    padding: 15px;
+  }
+
+  .favorite-card h3 {
+    font-size: 16px;
+  }
+
+  .favorite-content p {
+    font-size: 12px;
+  }
+}
+
+/* Icon Section Styles */
+.icon-section {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center; /* Center the icons */
+}
+
+.heart-icon,
+.share-icon {
+  cursor: pointer;
+  color: var(--icon-color, #555); /* Default color */
+  opacity: 1; /* Ensure always visible */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth effects */
+  font-size: 20px; /* Adjust for better visibility */
+}
+
+.heart-icon:hover {
+  color: red; /* Example: Highlight red on hover */
+}
+
+.share-icon:hover {
+  color: blue; /* Example: Highlight blue on hover */
+}
+
+/* No Image Title */
+.no-image-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 16px 0;
+}

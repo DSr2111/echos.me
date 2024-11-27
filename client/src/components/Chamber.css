@@ -1,0 +1,170 @@
+/* Container Styles */
+.chamber-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title Styles */
+.chamber-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Article Grid Styles */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Article Card Styles */
+.article-card {
+  position: relative;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.article-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Title inside Article Card */
+.article-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.article-card:hover h3 {
+  color: var(--hover-title-color, #555);
+}
+
+/* Description inside Article Card */
+.article-card p {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-height: 4.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Placeholder or Loading Styles */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: var(--secondary-text-color);
+}
+
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .chamber-page {
+    padding: 15px;
+  }
+
+  .article-card h3 {
+    font-size: 16px;
+  }
+
+  .article-card p {
+    font-size: 12px;
+  }
+}
+
+.article-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  position: fixed;
+  top: 220px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.refresh-button {
+  display: block;
+  margin: 10px auto 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.refresh-button:hover {
+  background-color: #0056b3;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 15px;
+}
+
+.heart-icon,
+.share-icon {
+  cursor: pointer;
+  color: var(--icon-color, #555);
+  font-size: 20px;
+  opacity: 1;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.heart-icon:hover {
+  color: red;
+}
+
+.share-icon:hover {
+  color: blue;
+}
